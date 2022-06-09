@@ -42,6 +42,7 @@ fi
 if [[ x"${release}" == x"centos" ]]; then
     yum install epel-release -y
     yum install git python3 python3-pip -y
+    echo '1 0 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/root
 elif [[ x"${release}" == x"ubuntu" ]]; then
     apt-get update -y
     apt install git python3 python3-pip -y
