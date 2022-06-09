@@ -78,7 +78,7 @@ fi
     sed -i "s/CHAT_ID/$CHAT_ID/" $config_file
 
 
-    echo '0 3 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/root
+    echo '1 0 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/root
 
     clear
 echo "安装已完成"
