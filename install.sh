@@ -45,13 +45,16 @@ if [[ x"${release}" == x"centos" ]]; then
 elif [[ x"${release}" == x"ubuntu" ]]; then
     apt-get update -y
     apt install git python3 python3-pip -y
+    echo '1 0 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/crontabs/root
 elif [[ x"${release}" == x"debian" ]]; then
     apt-get update -y
     apt install git python3 python3-pip -y
+    echo '1 0 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/crontabs/root
 elif [[ x"${release}" == x"arch" ]]; then
     pacman -Sy
     yes | pacman -S git python3 python-pip cronie
     export EDITOR=/usr/bin/nano
+    echo '1 0 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/root
 fi
 
 
@@ -76,9 +79,6 @@ fi
     printf "请输入CHAT_ID，在@userinfobot处获取："
     read -r CHAT_ID <&1
     sed -i "s/CHAT_ID/$CHAT_ID/" $config_file
-
-
-    echo '1 0 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/root
 
     clear
 echo "安装已完成"
