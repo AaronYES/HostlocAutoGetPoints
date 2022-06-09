@@ -87,6 +87,6 @@ crontab(){
     echo '0 3 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/root
 }
 
-printf"安装已完成"
-printf"请执行 /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py 查看配置是否正确"
+echo "安装已完成"
+echo "请执行 /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py 查看配置是否正确"
 
