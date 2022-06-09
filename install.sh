@@ -63,16 +63,16 @@ fi
 
     cd HostlocAutoGetPoints
     config_file=HostlocAutoGetPoints.py
-    printf "请输入Hostloc账号，如果您有多个账号，请使用英文逗号隔开"
+    printf "请输入Hostloc账号，如果您有多个账号，请使用英文逗号隔开："
     read -r USERNAME <&1
     sed -i "s/USERNAME/$USERNAME/" $config_file
-    printf "请输入Hostloc密码，如果您有多个账号，请使用英文逗号隔开"
+    printf "请输入Hostloc密码，如果您有多个账号，请使用英文逗号隔开："
     read -r PASSWORD <&1
     sed -i "s/PASSWORD/$PASSWORD/" $config_file
-    printf "请输入BOT_API，在@BotFather处申请"
+    printf "请输入BOT_API，在@BotFather处申请："
     read -r BOT_API <&1
     sed -i "s/BOT_API/$BOT_API/" $config_file
-    printf "请输入CHAT_ID，在@userinfobot处获取"
+    printf "请输入CHAT_ID，在@userinfobot处获取："
     read -r CHAT_ID <&1
     sed -i "s/CHAT_ID/$CHAT_ID/" $config_file
 
