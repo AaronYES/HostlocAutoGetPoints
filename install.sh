@@ -60,7 +60,8 @@ fi
 
     git clone https://github.com/AaronYES/HostlocAutoGetPoints
 
-
+    clear
+    
     cd HostlocAutoGetPoints
     config_file=HostlocAutoGetPoints.py
     printf "请输入Hostloc账号，如果您有多个账号，请使用英文逗号隔开："
