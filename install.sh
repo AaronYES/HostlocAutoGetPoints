@@ -61,7 +61,7 @@ fi
     git clone https://github.com/AaronYES/HostlocAutoGetPoints
 
     clear
-    
+
     cd HostlocAutoGetPoints
     config_file=HostlocAutoGetPoints.py
     printf "请输入Hostloc账号，如果您有多个账号，请使用英文逗号隔开："
@@ -80,7 +80,7 @@ fi
 
     echo '0 3 * * * /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py' >> /var/spool/cron/root
 
-
+    clear
 echo "安装已完成"
 echo "请执行 /usr/bin/python3 /root/HostlocAutoGetPoints/HostlocAutoGetPoints.py 查看配置是否正确"
 
